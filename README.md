@@ -82,7 +82,7 @@ Then, copy ```hazy``` and ```clear``` folders from downloaded ITS and OTS to ```
 If you hope to use your own training dataset, please follow the same folder structure in ```./data/train/```). More details can be found in ```train_data.py```.
 
 After put the training dataset into the correct path, we can train the GridDehazeNet by simply running ```train.py``` using default settings.
-Similar to the [testing ste](#quick-start), if there is no error raised, you will see the following messages shown in your bash
+Similar to the [testing step](#quick-start), if there is no error raised, you will see the following messages shown in your bash
 
 ```
 --- Hyper-parameters for training ---
