@@ -1,31 +1,34 @@
-# GridDehazeNet
+# GridDehazeNet &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 This repo contains the official training and testing codes for our paper:
 
-#### GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing
+### GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing
 [Xiaohong Liu](https://xiaohongliu.ca)<sup>[*](#myfootnote1)</sup>, Mayong Rui<sup>[*](#myfootnote1)</sup>, Zhihao Shi, [Jun Chen](http://www.ece.mcmaster.ca/~junchen/)
 
-<a name="myfootnote1">*</a> Equal contribution
+<a name="myfootnote1">*</a> _Equal contribution_
 
-ICCV 2019 [[Paper]()] [[Project Page](https://xiaohongliu.ca/GridDehazeNet/)]
+Published on _2019 IEEE International Conference on Computer Vision (ICCV)_
+
+[[Paper]()] [[Project Page](https://xiaohongliu.ca/GridDehazeNet/)]
+___
 
 ## Prerequisites
-Python 3.6 or newer
-[Pytorch](https://pytorch.org/) 1.0 or newer  
-Torchvision 0.2.2 or newer  
-Pillow 5.1.0 or newer  
-Numpy 1.14.3 or newer  
-Scipy 1.1.0 or newer
+- Python >= 3.6  
+- [Pytorch](https://pytorch.org/) >= 1.0  
+- Torchvision >= 0.2.2  
+- Pillow >= 5.1.0  
+- Numpy >= 1.14.3
+- Scipy >= 1.1.0
 
 ## Introduction
-- ```train.py``` and ```test.py``` are the entry codes for training and testing the GridDehazeNet respectively.
-- ```train_data.py``` and ```val_data.py``` are used to load the training and validation/testing datasets respectively.
-- ```model.py``` defines the model of GridDehazeNet. And ```residual_dense_block.py``` builds the [RDB](https://arxiv.org/abs/1802.08797) block.
+- ```train.py``` and ```test.py``` are the entry codes for training and testing the GridDehazeNet.
+- ```train_data.py``` and ```val_data.py``` are used to load the training and validation/testing datasets.
+- ```model.py``` defines the model of GridDehazeNet, and ```residual_dense_block.py``` builds the [RDB](https://arxiv.org/abs/1802.08797) block.
 - ```perceptual.py``` defines the network for [perceptual loss](https://arxiv.org/abs/1603.08155).
 - ```utils.py``` contains all corresponding utilities.
 - ```indoor_haze_best_3_6``` and ```outdoor_haze_best_3_6``` are the trained weights for indoor and outdoor in SOTS from [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0?authuser=0), where 3 and 6 stand for the network rows and columns (please read our paper for more details).
 - The ```./trainning_log/indoor_log.txt``` and ```./trainning_log/outdoor_log.txt``` record the logs.
-- The testing hazy images are saved in ```./indoor_results``` or ```./outdoor_results``` according to the image category.
-- The ```./data``` folder stores the data for training and testing.
+- The testing hazy images are saved in ```./indoor_results/``` or ```./outdoor_results/``` according to the image category.
+- The ```./data/``` folder stores the data for training and testing.
 
 ## Quick Start
 
@@ -36,7 +39,11 @@ Clone this repo in environment that satisfies the prerequisites
 $ git clone https://github.com/proteus1991/GridDehazeNet.git
 $ cd GridDehazeNet
 ```
-Run ```test.py``` as default hyper-parameter settings. If everything goes well, you will see the following messages shown in your bash
+Run ```test.py``` using default hyper-parameter settings. 
+```bash
+$ python3 test.py
+```
+If everything goes well, you will see the following messages shown in your bash
 
 ```
 --- Hyper-parameters for testing ---
@@ -70,13 +77,14 @@ $ python3 test.py -h
 
 ### 2. Training
 To retrain or fine-tune the GridDehazeNet, first download the ITS (for indoor) and OTS (for outdoor) training datasets from [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0?authuser=0).
-Then, copy ```hazy``` and ```clear``` folders from downloaded ITS and OTS to ```./data/train/indoor/``` and ```./data/train/outdoor/``` **respectively**. 
+Then, copy ```hazy``` and ```clear``` folders from downloaded ITS and OTS to ```./data/train/indoor/``` and ```./data/train/outdoor/```. Here we provide the indoor and outdoor training list in ```trainlist.txt``` for reproduction purpose. Also, we found some hazy images in training set are quite similar to the testing set (use the same ground-truth images but with different parameters to generate hazy images). For fairness, we carefully remove all of them from the training set and write the rest in ```trainlist.txt```.
+
 If you hope to use your own training dataset, please follow the same folder structure in ```./data/train/```). More details can be found in ```train_data.py```.
 
-After put the training dataset into the correct path, we can train the GridDehazeNet by simply running ```train.py``` with default settings.
-Similar to the **testing step**, if there is no error raised, you will see the following messages shown in your bash
+After put the training dataset into the correct path, we can train the GridDehazeNet by simply running ```train.py``` using default settings.
+Similar to the [testing ste](#quick-start), if there is no error raised, you will see the following messages shown in your bash
 
-```bash
+```
 --- Hyper-parameters for training ---
 learning_rate: 0.001
 crop_size: [240, 240]
@@ -96,7 +104,7 @@ Epoch: 0, Iteration: 0
 Epoch: 0, Iteration: 100
 ...
 ```
-Follow the instruction in **testing step** to modify the default settings.
+Follow the instruction in [testing](#quick-start) to modify the default settings.
 
 ## Cite
 If you use any part of this code, please kindly cite
