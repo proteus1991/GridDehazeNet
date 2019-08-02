@@ -1,0 +1,1 @@
+Date: 2019-08-01 17:36:32s, Time_Cost: 573s, Epoch: [1/100], Train_PSNR: 29.79, Val_PSNR: 30.13, Val_SSIM: 0.9707
