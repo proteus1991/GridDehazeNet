@@ -1,4 +1,4 @@
-# GridDehazeNet &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+# GridDehazeNet
 This repo contains the official training and testing codes for our paper:
 
 ### GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing
