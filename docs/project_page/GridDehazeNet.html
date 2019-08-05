@@ -1,0 +1,282 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>GridDehazeNet</title>
+    <link rel="stylesheet" type="text/css" href="./resource/style.css">
+</head>
+
+<body>
+<br>
+<center>
+    <span style="font-size:42px">GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing</span>
+</center>
+
+<br>
+<table align="center" width="700px">
+    <tbody>
+    <tr>
+        <td align="center" width="100px">
+            <center>
+                <span style="font-size:20px"><a href="https://xiaohongliu.ca">Xiaohong Liu</a><sup>*</sup></span>
+            </center>
+        </td>
+
+        <td align="center" width="100px">
+            <center>
+                <span style="font-size:20px">Yongrui Ma<sup>*</sup></span>
+            </center>
+        </td>
+
+
+        <td align="center" width="100px">
+            <center>
+                <span style="font-size:20px">Zhihao Shi</span>
+            </center>
+        </td>
+
+        <td align="center" width="100px">
+            <center>
+                <span style="font-size:20px"><a href="http://www.ece.mcmaster.ca/~junchen/">Jun Chen</a></span>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<table align="center" width="700px">
+    <tbody>
+    <tr>
+        <td align="center" width="100px">
+            <center>
+                <span style="font-size:20px">McMaster University</span>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<table align="center" width="700px">
+    <tbody>
+    <tr>
+        <td align="center" width="100px">
+            <center>
+                <span style="font-size:20px;color:red"><a href="http://iccv2019.thecvf.com/">ICCV, 2019</a></span>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<center>
+    <div class="card">
+        <div class="caption-container">
+            <span class="caption"></span>
+        </div>
+    </div>
+</center>
+
+
+<br>
+<p align="justify" style="font-size: 18px">
+    We propose an end-to-end trainable Convolutional Neural Network (CNN), named GridDehazeNet, for single image
+    dehazing. The GridDehazeNet consists of three modules: pre-processing, backbone, and post-processing. The trainable
+    pre-processing module can generate learned inputs with better diversity and more pertinent features as compared to
+    those derived inputs produced by hand-selected pre-processing methods. The backbone module implements a novel
+    attention-based multi-scale estimation on a grid network, which can effectively alleviate the bottleneck issue often
+    encountered in the conventional multi-scale approach. The post-processing module helps to reduce the artifacts in
+    the final output. Experimental results indicate that the GridDehazeNet outperforms the state-of-the-arts on both
+    synthetic and real-world images. The proposed hazing method does not rely on the atmosphere scattering model, and we
+    provide an explanation as to why it is not necessarily beneficial to take advantage of the dimension reduction
+    offered by the atmosphere scattering model for image dehazing, even if only the dehazing results on synthetic images
+    are concerned.
+    * authors contributed equally
+</p>
+
+<br>
+<span>* Authors contributed equally</span>
+<br>
+
+<br>
+<hr>
+<center><h1>News</h1></center>
+<ul>
+    <li>[Coming Soon] Paper will be released on arXiv</li>
+    <li>[August 2019] Code released On <a href="https://github.com/proteus1991/GridDehazeNet">Github</a></li>
+</ul>
+
+<br>
+<hr>
+<center><h1>Paper</h1></center>
+<table align="center" width="700">
+
+    <tbody>
+    <tr>
+        <td><a href=""><img style="height:180px; border: solid; border-radius:30px;"
+                            src="./resource/paper_cover.png"></a></td>
+        <td><span style="font-size:18px">Xiaohong Liu* , Yongrui Ma* , Zhihao Shi , Jun Chen<br>
+                          <small>(* equal contribution)</small><br><br>
+                          GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing<br><br>
+
+			  <a href="http://iccv2019.thecvf.com/">ICCV, 2019</a> (to appear).<br>
+                    </span></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+
+<table align="center" width="700px">
+    <tbody>
+    <tr>
+        <td>
+                    <span style="font-size:18px"><center>
+                      <a href="">[Preprint]</a>
+                    </center></span></td>
+
+        <td><span style="font-size:18px"><center>
+                      <a href="">[Bibtex]</a>
+                    </center></span></td>
+
+        <td><span style="font-size:18px"><center>
+                      <a href="https://github.com/proteus1991/GridDehazeNet">[Code]</a>
+                    </center></span></td>
+
+    </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+
+<center><h1>The architecture of GridDehazeNet</h1></center>
+<center>
+    <img class="round" style="height:500" src="./resource/GridDehazeNet_main.png"></a>
+</center>
+<br>
+<center><h1>Illustration of the dash block</h1></center>
+<center>
+    <img class="round" style="height:500" src="./resource/GridDehazeNet_block.png"></a>
+</center>
+
+
+<br>
+<hr>
+
+<center><h1> Qualitative Comparisons</h1></center>
+<br>
+
+<table align="center" width="900px">
+    <tbody>
+    <tr>
+        <td width="100px">
+            <center>
+                <a href="./resource/SOTS.png"><img src="./resource/SOTS.png" width="900px"></a><br>
+            </center>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <center>
+                    <span style="font-size:14px">
+                            Qualitative comparisons on SOTS.
+                    </span>
+            </center>
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2">
+            <center>
+                <a href="./resource/Real_world.png"><img src="./resource/Real_world.png" width="900px"></a><br>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <center>
+                    <span style="font-size:14px">
+                        Qualitative comparisons on the real-world dataset.
+                    </span>
+            </center>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+<br>
+<hr>
+
+<center><h1> Quantitative Comparisons</h1></center>
+<br>
+
+<table align="center" width="900px">
+    <tbody>
+
+    <tr>
+        <td colspan="2">
+            <center>
+                <a href="./resource/Comparisons.png"><img src="./resource/Comparisons.png" width="900px"></a><br>
+            </center>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td colspan="2">
+            <center>
+                    <span style="font-size:14px">
+                        Comparisons on SOTS and Sun RGB-D for different methods
+                    </span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <center>
+                <a href="./resource/Different_variants.png"><img src="./resource/Different_variants.png" width="900px"></a><br>
+            </center>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td colspan="2">
+            <center>
+                    <span style="font-size:14px">
+                        Comparisons on SOTS for different variants of GridDehazeNet.
+                    </span>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <center>
+                <a href="./resource/Computational_Complexity.png"><img src="./resource/Computational_Complexity.png"
+                                                                       width="600px"></a><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <center>
+                    <span style="font-size:14px">
+                        Runtime comparison of different dehazing methods.
+                    </span>
+            </center>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+<hr>
+<br>
+
+
+</body>
+</html>
