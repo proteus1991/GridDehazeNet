@@ -115,6 +115,7 @@ title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
 author={Liu, Xiaohong and Ma, Yongrui and Shi, Zhihao and Chen, Jun},
 booktitle={ICCV},
 year={2019}
+}
 ```
 
 
