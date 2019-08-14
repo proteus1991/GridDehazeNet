@@ -13,7 +13,7 @@ import argparse
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from val_data import ValData
-from model import GateHazeNet
+from model import GridDehazeNet
 from utils import validation
 
 # --- Parse hyper-parameters  --- #
@@ -58,7 +58,7 @@ val_data_loader = DataLoader(ValData(val_data_dir), batch_size=val_batch_size, s
 
 
 # --- Define the network --- #
-net = GateHazeNet(height=network_height, width=network_width, num_dense_layer=num_dense_layer, growth_rate=growth_rate)
+net = GridDehazeNet(height=network_height, width=network_width, num_dense_layer=num_dense_layer, growth_rate=growth_rate)
 
 
 # --- Multi-GPU --- #

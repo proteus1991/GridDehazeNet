@@ -41,9 +41,9 @@ class UpSample(nn.Module):
 
 
 # --- Main model  --- #
-class GateHazeNet(nn.Module):
+class GridDehazeNet(nn.Module):
     def __init__(self, in_channels=3, depth_rate=16, kernel_size=3, stride=2, height=3, width=6, num_dense_layer=4, growth_rate=16, attention=True):
-        super(GateHazeNet, self).__init__()
+        super(GridDehazeNet, self).__init__()
         self.rdb_module = nn.ModuleDict()
         self.upsample_module = nn.ModuleDict()
         self.downsample_module = nn.ModuleDict()

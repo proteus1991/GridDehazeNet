@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 from train_data import TrainData
 from val_data import ValData
-from model import GateHazeNet
+from model import GridDehazeNet
 from utils import to_psnr, print_log, validation, adjust_learning_rate
 from torchvision.models import vgg16
 from perceptual import LossNetwork
@@ -72,7 +72,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # --- Define the network --- #
-net = GateHazeNet(height=network_height, width=network_width, num_dense_layer=num_dense_layer, growth_rate=growth_rate)
+net = GridDehazeNet(height=network_height, width=network_width, num_dense_layer=num_dense_layer, growth_rate=growth_rate)
 
 
 # --- Build optimizer --- #

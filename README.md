@@ -110,6 +110,15 @@ Follow the instruction in [testing](#quick-start) to modify the default settings
 If you use any part of this code, please kindly cite
 
 ```
+@article{liuICCV2019GridDehazeNet,
+    title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
+    author={Liu, Xiaohong and Ma, Yongrui and Shi, Zhihao and Chen, Jun},
+    journal={arXiv preprint arXiv:1908.03245},
+    year={2019}
+}
+```
+Or
+```
 @inproceedings{liuICCV2019GridDehazeNet,
 title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
 author={Liu, Xiaohong and Ma, Yongrui and Shi, Zhihao and Chen, Jun},
@@ -117,5 +126,6 @@ booktitle={ICCV},
 year={2019}
 }
 ```
+
 
 

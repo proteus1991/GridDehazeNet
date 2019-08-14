@@ -1,3 +1,10 @@
+@article{liuICCV2019GridDehazeNet,
+    title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
+    author={Liu, Xiaohong and Ma, Yongrui and Shi, Zhihao and Chen, Jun},
+    journal={arXiv preprint arXiv:1908.03245},
+    year={2019}
+}
+
 @inproceedings{liuICCV2019GridDehazeNet,
 title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
 author={Liu, Xiaohong and Ma, Yongrui and Shi, Zhihao and Chen, Jun},
