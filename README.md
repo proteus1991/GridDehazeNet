@@ -79,7 +79,7 @@ $ python3 test.py -h
 To retrain or fine-tune the GridDehazeNet, first download the ITS (for indoor) and OTS (for outdoor) training datasets from [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0?authuser=0).
 Then, copy ```hazy``` and ```clear``` folders from downloaded ITS and OTS to ```./data/train/indoor/``` and ```./data/train/outdoor/```. Here we provide the indoor and outdoor training list in ```trainlist.txt``` for reproduction purpose. Also, we found some hazy images in training set are quite similar to the testing set (use the same ground-truth images but with different parameters to generate hazy images). For fairness, we carefully remove all of them from the training set and write the rest in ```trainlist.txt```.
 
-If you hope to use your own training dataset, please follow the same folder structure in ```./data/train/```). More details can be found in ```train_data.py```.
+If you hope to use your own training dataset, please follow the same folder structure in ```./data/train/```. More details can be found in ```train_data.py```.
 
 After put the training dataset into the correct path, we can train the GridDehazeNet by simply running ```train.py``` using default settings.
 Similar to the [testing step](#quick-start), if there is no error raised, you will see the following messages shown in your bash
