@@ -2,7 +2,7 @@
 This repo contains the official training and testing codes for our paper:
 
 ### GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing
-[Xiaohong Liu](https://xiaohongliu.ca)<sup>[*](#myfootnote1)</sup>, Mayong Rui<sup>[*](#myfootnote1)</sup>, Zhihao Shi, [Jun Chen](http://www.ece.mcmaster.ca/~junchen/)
+[Xiaohong Liu](https://xiaohongliu.ca)<sup>[*](#myfootnote1)</sup>, Yongrui Ma<sup>[*](#myfootnote1)</sup>, Zhihao Shi, [Jun Chen](http://www.ece.mcmaster.ca/~junchen/)
 
 <a name="myfootnote1">*</a> _Equal contribution_
 
@@ -81,7 +81,7 @@ Then, copy ```hazy``` and ```clear``` folders from downloaded ITS and OTS to ```
 
 If you hope to use your own training dataset, please follow the same folder structure in ```./data/train/```. More details can be found in ```train_data.py```.
 
-After put the training dataset into the correct path, we can train the GridDehazeNet by simply running ```train.py``` using default settings.
+After putting the training dataset into the correct path, we can train the GridDehazeNet by simply running ```train.py``` using default settings.
 Similar to the [testing step](#quick-start), if there is no error raised, you will see the following messages shown in your bash
 
 ```
@@ -109,15 +109,6 @@ Follow the instruction in [testing](#quick-start) to modify the default settings
 ## Cite
 If you use any part of this code, please kindly cite
 
-```
-@article{liuICCV2019GridDehazeNet,
-    title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
-    author={Liu, Xiaohong and Ma, Yongrui and Shi, Zhihao and Chen, Jun},
-    journal={arXiv preprint arXiv:1908.03245},
-    year={2019}
-}
-```
-Or
 ```
 @inproceedings{liuICCV2019GridDehazeNet,
     title={GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing},
