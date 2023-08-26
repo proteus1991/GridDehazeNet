@@ -2,7 +2,7 @@
 This repo contains the official training and testing codes for our paper:
 
 ### GridDehazeNet: Attention-Based Multi-Scale Network for Image Dehazing
-[Xiaohong Liu](https://xiaohongliu.ca)<sup>[*](#myfootnote1)</sup>, Yongrui Ma<sup>[*](#myfootnote1)</sup>, Zhihao Shi, [Jun Chen](http://www.ece.mcmaster.ca/~junchen/)
+[Xiaohong Liu](https://jhc.sjtu.edu.cn/~xiaohongliu/)<sup>[*](#myfootnote1)</sup>, Yongrui Ma<sup>[*](#myfootnote1)</sup>, Zhihao Shi, [Jun Chen](http://www.ece.mcmaster.ca/~junchen/)
 
 <a name="myfootnote1">*</a> _Equal contribution_
 
