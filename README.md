@@ -8,7 +8,7 @@ This repo contains the official training and testing codes for our paper:
 
 Published on _2019 IEEE International Conference on Computer Vision (ICCV)_
 
-[[Paper](https://proteus1991.github.io/GridDehazeNet/resource/GridDehazeNet.pdf)] [[Project Page](https://proteus1991.github.io/GridDehazeNet/)]
+[[Paper](https://jhc.sjtu.edu.cn/~xiaohongliu/papers/2019griddehazenet.pdf)] [[Project Page](https://proteus1991.github.io/GridDehazeNet/)]
 ___
 
 ## Prerequisites
